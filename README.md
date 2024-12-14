@@ -13,29 +13,42 @@ This Python script allows you to test your network speed by measuring download s
 
 ## Installation
 
+### Option 1: Install Globally (Recommended)
+
+```bash
+pip install git+https://github.com/Sharma-IT/network-speed-tester.git
+```
+
+### Option 2: Local Development Installation
+
 1. **Clone the Repository**:
 
 ```bash
 git clone https://github.com/Sharma-IT/network-speed-tester.git
-cd network-speed-test
+cd network-speed-tester
 ```
 
-2. **Install Required Libraries**:
+2. **Install in Development Mode**:
 
 ```bash
-pip install requests tqdm aiohttp argparse
-```  
+pip install -e .
+```
+
+This will install the package in editable mode, allowing you to modify the source code and have the changes immediately reflected in the installed package.
 
 ## Usage
 
 Run the script from the command line with various options:
 
 ```bash
-python(3) speedtest.py --test all
+network-speed-tester --test all
+# or
+nst --test all
 ```
 
 ## Available Options:
 
+- `-h`, `--help`: Show help message
 - `--url`: Specify the test URL (default: `http://speedtest.tele2.net/10MB.zip`).
 - `--file_size`: Specify the size of the upload file in bytes (default: `10_000_000`).
 - `--test`: Specify the type of test to run. Options are:
@@ -51,31 +64,31 @@ python(3) speedtest.py --test all
 1. Test All Speeds and Ping:
 
 ```bash
-python(3) speedtest.py --test all
+network-speed-tester --test all
 ```
 
 2. Test Download Speed:
 
 ```bash
-python(3) speedtest.py --test download
+network-speed-tester --test download
 ```
 
 3. Test Upload Speed:
 
 ```bash
-python(3) speedtest.py --test upload
+network-speed-tester --test upload
 ```
 
 4. Test Ping:
 
 ```bash
-python(3) speedtest.py --test ping
+network-speed-tester --test ping
 ```
 
 5. Test Download Speed Asynchronously:
 
 ```bash
-python(3) speedtest.py --test async
+network-speed-tester --test async
 ```
 
 ## Contributing
