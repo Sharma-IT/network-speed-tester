@@ -16,7 +16,7 @@ This Python script allows you to test your network speed by measuring download s
 1. **Clone the Repository**:
 
 ```bash
-git clone https://github.com/Sharma-IT/network-speed-test.git
+git clone https://github.com/Sharma-IT/network-speed-tester.git
 cd network-speed-test
 ```
 
